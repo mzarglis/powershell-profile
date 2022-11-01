@@ -21,7 +21,7 @@ if (-not(Test-Path -Path $PROFILE -PathType Leaf)) {
 winget install -e --accept-source-agreements --accept-package-agreements JanDeDobbeleer.OhMyPosh
 
 # Font Install
-Invoke-RestMethod https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CascadiaCode.zip?WT.mc_id=-blog-scottha -o cove.zip
+Invoke-RestMethod https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/FiraCode.zip -o firacode.zip
 
 # Choco install
 #
