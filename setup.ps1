@@ -1,7 +1,7 @@
 #If the file does not exist, create it.
 if (-not(Test-Path -Path $PROFILE -PathType Leaf)) {
      try {
-         Invoke-RestMethod https://github.com/ChrisTitusTech/powershell-profile/raw/main/Microsoft.PowerShell_profile.ps1 -o $PROFILE
+         Invoke-RestMethod https://raw.githubusercontent.com/mzarglis/powershell-profile/main/Microsoft.PowerShell_profile.ps1 -o $PROFILE
          Write-Host "The profile @ [$PROFILE] has been created."
      }
      catch {
