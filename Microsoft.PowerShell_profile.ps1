@@ -208,6 +208,7 @@ function pgrep($name) {
 
 ## Final Line to set prompt
 oh-my-posh --init --shell pwsh --config ~/jandedobbeleer.omp.json | Invoke-Expression
+Import-Module -Name Terminal-Icons
 
 # Import the Chocolatey Profile that contains the necessary code to enable
 # tab-completions to function for `choco`.
