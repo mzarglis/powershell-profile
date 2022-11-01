@@ -17,12 +17,14 @@ if (-not(Test-Path -Path $PROFILE -PathType Leaf)) {
 & $profile
 
 # OMP Install
-#
 winget install -e --accept-source-agreements --accept-package-agreements JanDeDobbeleer.OhMyPosh
 
 # Font Install
 Invoke-RestMethod https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/FiraCode.zip -o firacode.zip
 
 # Choco install
-#
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+#Install Terminal Icons
+Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
+Install-Module -Name Terminal-Icons -Repository PSGallery  -confirm
